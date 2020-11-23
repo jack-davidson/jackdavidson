@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Jack Davidson</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'core/style/main.css' %}">
+	<script src="{% static 'core/script/main.js' %}"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="profile" class="card">
+		<img src="{% static 'core/img/devicon.png' %}">
+		<div>
+			<span style="font-size: 16px;">Jack Davidson</span>
+			<p>Software Engineer</p>
+		</div>
+	</div>
+	<div id="menu">
+		<div class="grid">
+			<div id="about" class="card">
+				About
+				<div id="about_content" style="display: none;">
+					<p style="padding-left: 2vw; padding-right: 2vw;">
+						Hi, my name is Jack Davidson and I am a web developer &amp;
+						programmer based in Austin, Texas. I enjoy computer science
+						&amp; mathematics. I have a strong passion for learning
+						and I am a strong believer in the growth mindset.
+					</p>
+				</div>
+			</div>
+			<div id="portfolio" class="card">
+				Portfolio
+				<div id="portfolio_content" style="display: none;">
+					<div id="portfolio_grid" class="grid">
+					</div>
+				</div>
+			</div>
+			<div id="resume" class="card">
+				Resume
+			</div>
+			<div id="git" class="card">
+				Git
+			</div>
+			<div id="contact" class="card">
+				Contact
+				<div id="contact_content" style="display: none;">
+					<p>
+						mail: jackmaverickdavidson at gmail dot com
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

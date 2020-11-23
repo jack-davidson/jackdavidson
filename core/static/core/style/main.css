@@ -1,0 +1,87 @@
+html {
+	font-family: 'Roboto Mono', monospace;
+	background-color: #fff;
+	font-size: 15px;
+	color: #000000;
+}
+
+body::-webkit-scrollbar {
+	display: none; 
+}
+
+body {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+	color: inherit; 
+}
+
+img {
+	max-width: 20%;
+	border-radius: 5px;
+	margin-bottom: 1vw;
+}
+
+#portfolio_grid {
+	grid-template-columns: 33% 33% 33%;
+}
+
+#menu {
+	width: 50vw;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5vw;
+}
+
+#profile {
+	padding-top: 2vw;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	width: 30vw;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2vw;
+	margin-bottom: 4vw;
+}
+
+.grid {
+	display: grid;
+	grid-gap: 1;
+}
+
+.card {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	border-radius: 10px;
+	transition: 0.3s;
+	padding: 10px;
+	margin: 10px;
+	width: fill;
+}
+
+.card.profile:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover {
+	box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 1000px) {
+	#menu {
+		width: 80vw;
+	}
+
+	#portfolio_grid {
+		grid-template-columns: 50% 50%;
+	}
+
+	#profile {
+		width: 60vw;
+		margin-bottom: 8vw;
+	}
+}
