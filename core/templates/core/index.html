@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<script src="{% static 'script/toggle.js' %}"></script>
 <div id="profile" class="card">
 	<img src="{% static 'core/img/devicon.png' %}">
 	<div>
@@ -10,7 +11,7 @@
 </div>
 <div id="menu">
 	<div class="grid">
-		<div id="about" class="card">
+		<div onclick="toggle('about_content')" id="about" class="card" style="cursor: pointer">
 			About
 			<div id="about_content" style="display: none;">
 				<p style="padding-left: 2vw; padding-right: 2vw;">
@@ -21,20 +22,13 @@
 				</p>
 			</div>
 		</div>
-		<div id="portfolio" class="card">
-			Portfolio
-			<div id="portfolio_content" style="display: none;">
-				<div id="portfolio_grid" class="grid">
-				</div>
-			</div>
-		</div>
 		<div id="resume" class="card">
 			Resume
 		</div>
 		<div id="git" class="card">
 			Git
 		</div>
-		<div id="contact" class="card">
+		<div onclick="toggle('contact_content')" id="contact" class="card" style="cursor: pointer">
 			Contact
 			<div id="contact_content" style="display: none;">
 				<p>
