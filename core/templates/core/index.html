@@ -8,13 +8,7 @@
 <link rel="stylesheet" href="{% static 'style/grid.css' %}">
 <link rel="stylesheet" href="{% static 'style/card.css' %}">
 
-<div class="profile" class="card">
-	<img src="{% static 'core/img/devicon.png' %}">
-	<div>
-		<span style="font-size: 16px;">Jack Davidson</span>
-		<p>Software Engineer</p>
-	</div>
-</div>
+{% include 'profile.html' %}
 
 <div class="menu">
 	<div class="grid">

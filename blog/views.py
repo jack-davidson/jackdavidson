@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.exceptions import ObjectDoesNotExist
 
 from .models import BlogPost
 
@@ -20,8 +21,15 @@ def index(request):
 
 # view a blog by its id
 def blog(request, blogid):
+    # handle the case of a nonexistent requested blog
+    try:
+        blog = BlogPost.objects.get(pk=blogid)
+    except ObjectDoesNotExist:
+        blog = None
+
     # context stores the variables our template needs access to
     context = {
-        'blog': BlogPost.objects.get(pk=blogid),
+        'blog': blog,
     }
+
     return render(request, 'blog/blog.html', context)
