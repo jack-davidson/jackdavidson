@@ -3,6 +3,7 @@
 {% block content %}
 
 <script src="{% static 'script/toggle.js' %}"></script>
+<link rel="stylesheet" href="{% static 'blog/style/blog.css' %}">
 
 <div id="profile" class="card">
 	<img src="{% static 'core/img/devicon.png' %}">
@@ -16,7 +17,7 @@
 	<div class="grid">
 		<div class="card">
 			{{ blog.title }}
-			<div class="card">
+			<div class="blog">
 					{{ blog.document|safe }}
 			</div>
 		</div>
