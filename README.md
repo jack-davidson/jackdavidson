@@ -11,10 +11,10 @@ I am using:
 - HTML + CSS + Vanilla Javascript for the frontend
 
 the acronym for this is:
-L inux
-N ginx
-S qlite
-P ython
+**L** inux
+**N** ginx
+**S** qlite
+**P** ython
 
 LNSP stack, I don't know if this is a thing but this is what my stack's acronym
 is.
