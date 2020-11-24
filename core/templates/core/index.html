@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 <script src="{% static 'script/toggle.js' %}"></script>
+
 <div id="profile" class="card">
 	<img src="{% static 'core/img/devicon.png' %}">
 	<div>
@@ -9,33 +11,51 @@
 		<p>Software Engineer</p>
 	</div>
 </div>
+
 <div id="menu">
 	<div class="grid">
-		<div onclick="toggle('about_content')" id="about" class="card" style="cursor: pointer">
-			About
-			<div id="about_content" style="display: none;">
-				<p style="padding-left: 2vw; padding-right: 2vw;">
-					Hi, my name is Jack Davidson and I am a web developer &amp;
-					programmer based in Austin, Texas. I enjoy computer science
-					&amp; mathematics. I have a strong passion for learning
-					and I am a strong believer in the growth mindset.
-				</p>
+
+		<a href="javascript:toggle('about_content')">
+			<div id="about" class="card" style="cursor: pointer">
+				About
+				<div id="about_content" style="display: none;">
+					<p style="padding-left: 2vw; padding-right: 2vw;">
+						Hi, my name is Jack Davidson and I am a web developer &amp;
+						programmer based in Austin, Texas. I enjoy computer science
+						&amp; mathematics. I have a strong passion for learning
+						and I am a strong believer in the growth mindset.
+					</p>
+				</div>
 			</div>
-		</div>
+		</a>
+
+		<a href="/blog">
+			<div id="blog" class="card">
+				Blog
+			</div>
+		</a>
+
 		<div id="resume" class="card">
 			Resume
 		</div>
-		<div id="git" class="card">
-			Git
-		</div>
-		<div onclick="toggle('contact_content')" id="contact" class="card" style="cursor: pointer">
-			Contact
-			<div id="contact_content" style="display: none;">
-				<p>
-					mail: jackmaverickdavidson at gmail dot com
-				</p>
+
+		<a href="https://github.com/jack-davidson">
+			<div id="git" class="card">
+				Git
 			</div>
-		</div>
+		</a>
+
+		<a href="javascript:toggle('contact_content')">
+			<div id="contact" class="card" style="cursor: pointer">
+				Contact
+				<div id="contact_content" style="display: none;">
+					<p>
+						mail: jackmaverickdavidson at gmail dot com
+					</p>
+				</div>
+			</div>
+		</a>
+
 	</div>
 </div>
 {% endblock content %}

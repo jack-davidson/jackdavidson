@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="{% static 'script/toggle.js' %}"></script>
+
+<div id="profile" class="card">
+	<img src="{% static 'core/img/devicon.png' %}">
+	<div>
+		<span style="font-size: 16px;">Jack Davidson</span>
+		<p>Software Engineer</p>
+	</div>
+</div>
+
+<div id="menu">
+	<div class="grid">
+		<div class="card">
+			{{ blog.title }}
+			<div class="card">
+					{{ blog.document|safe }}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
