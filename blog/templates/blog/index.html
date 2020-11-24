@@ -16,6 +16,16 @@
 	<div class="grid">
 		<div class="card">
 			Recent Blogs
+			{% for blog in recent_blogs %}
+				<a href="/blog/{{ blog.id }}">
+					<div class="card">
+						{{ blog.title }}
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+		<div class="card">
+			All Blogs
 			{% for blog in blogs %}
 				<a href="/blog/{{ blog.id }}">
 					<div class="card">

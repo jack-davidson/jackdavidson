@@ -18,3 +18,65 @@ P ython
 
 LNSP stack, I don't know if this is a thing but this is what my stack's acronym
 is.
+
+# project structure
+
+```
+jackdavidson
+    ├── README.md
+    ├── blog
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   │   ├── ...
+    │   ├── models.py
+    │   ├── static
+    │   │   ├── script
+    │   │   └── style
+    │   ├── templates
+    │   │   └── blog
+    │   │       ├── blog.html
+    │   │       └── index.html
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    ├── core
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   │   ├── ...
+    │   ├── models.py
+    │   ├── static
+    │   │   └── core
+    │   │       ├── img
+    │   │       │   └── devicon.png
+    │   │       ├── script
+    │   │       └── style
+    │   ├── templates
+    │   │   └── core
+    │   │       └── index.html
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    ├── db.sqlite3
+    ├── jackdavidson
+    │   ├── __init__.py
+    │   ├── asgi.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   └── wsgi.py
+    ├── manage.py
+    ├── requirements.txt
+    ├── secret_key.txt
+    ├── static
+    │   ├── img
+    │   ├── script
+    │   │   ├── base.js
+    │   │   └── toggle.js
+    │   └── style
+    │       └── base.css
+    └── templates
+        └── base.html
+```
