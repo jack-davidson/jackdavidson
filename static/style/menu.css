@@ -1,0 +1,13 @@
+.menu {
+	width: 51vw;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5vw;
+}
+
+@media screen and (max-width: 1000px) {
+	.menu {
+		width: 80vw;
+	}
+}

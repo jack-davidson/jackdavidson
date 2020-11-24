@@ -1,0 +1,9 @@
+#portfolio_grid {
+	grid-template-columns: 33% 33% 33%;
+}
+
+@media screen and (max-width: 1000px) {
+	#portfolio_grid {
+		grid-template-columns: 50% 50%;
+	}
+}
