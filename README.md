@@ -21,6 +21,19 @@ is.
 
 # project structure
 
+As django is a very structured framework, developers need to make sure that they
+establish a system to keep your project organized. Django's template system
+allows the developer to use inheritance to write less code. This inheritance
+also must be used in css to keep your project optimally organized.
+
+For css classes and ids that are needed by multiple apps, the stylesheets should
+be placed in the global /static/style directory. If a stylesheet is only needed
+by one app that should be placed in the <app>/static/style directory.
+
+Stylesheets should include a minimal amount of classes and rules and all
+rules in a stylesheet should be related to each other. Otherwise, make a
+separate stylesheet for them.
+
 ```
 jackdavidson
     ├── README.md

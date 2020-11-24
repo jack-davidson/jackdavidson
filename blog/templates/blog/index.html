@@ -3,6 +3,7 @@
 {% block content %}
 
 <script src="{% static 'script/toggle.js' %}"></script>
+<link rel="stylesheet" href="{% static 'style/profile.css' %}">
 
 <div id="profile" class="card">
 	<img src="{% static 'core/img/devicon.png' %}">
@@ -16,23 +17,35 @@
 	<div class="grid">
 		<div class="card">
 			All Blogs
-			{% for blog in recent_blogs %}
-				<a href="/blog/{{ blog.id }}">
-					<div class="card">
-						{{ blog.title }}
-					</div>
-				</a>
-			{% endfor %}
+			{% if blogs %}
+				{% for blog in recent_blogs %}
+					<a href="/blog/{{ blog.id }}">
+						<div class="card">
+							{{ blog.title }}
+						</div>
+					</a>
+				{% endfor %}
+			{% else %}
+				<div class="card">
+					There are no blogs currently posted.
+				</div>
+			{% endif %}
 		</div>
 		<div class="card">
 			All Blogs
-			{% for blog in blogs %}
-				<a href="/blog/{{ blog.id }}">
-					<div class="card">
-						{{ blog.title }}
-					</div>
-				</a>
-			{% endfor %}
+			{% if blogs %}
+				{% for blog in blogs %}
+					<a href="/blog/{{ blog.id }}">
+						<div class="card">
+							{{ blog.title }}
+						</div>
+					</a>
+				{% endfor %}
+			{% else %}
+				<div class="card">
+					There are no blogs currently posted.
+				</div>
+			{% endif %}
 		</div>
 	</div>
 </div>
