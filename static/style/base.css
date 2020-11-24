@@ -30,7 +30,7 @@ img {
 	grid-template-columns: 33% 33% 33%;
 }
 
-#menu {
+.menu {
 	width: 51vw;
 	text-align: center;
 	margin-left: auto;
