@@ -1,3 +1,9 @@
+/*
+ * This is the base css file. All styles that are needed globally and only
+ * globally are located here.
+ *
+ */
+
 html {
 	font-family: 'Roboto Mono', monospace;
 	background-color: #fff;
