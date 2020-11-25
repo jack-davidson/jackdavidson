@@ -13,5 +13,5 @@ pip install -r requirements.txt
 ./manage.py makemigrations
 ./manage.py migrate
 
-printf "\n\033[31m**\033[0m\033[32m You are now ready to start development or run the django \
-development server with ./manage.py runserver \033[0m\033[31m**\033[0m\n"
+printf "\n\033[31m**\033[0m\033[32m You are now ready to start development or \
+run the django development server with ./manage.py runserver \033[0m\033[31m**\033[0m\n\n"
