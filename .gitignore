@@ -2,3 +2,5 @@ secret_key.txt
 __pycache__
 *.pyc
 db.sqlite3
+venv
+env
