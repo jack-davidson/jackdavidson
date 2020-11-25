@@ -4,6 +4,11 @@ personal website and blog
 This is my personal website and blog where I post about technology related
 subjects.
 
+# installation
+To install and run this on your own machine using the django development server,
+first clone this repository:
+`git clone https://github.com/jack-davidson/jackdavidson.git`
+
 # technologies used
 I am using:
 - Python + django for the backend
