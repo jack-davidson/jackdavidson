@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block content %}
 
+{% load static %}
 <script src="{% static 'script/toggle.js' %}"></script>
-
 <link rel="stylesheet" href="{% static 'style/profile.css' %}">
 <link rel="stylesheet" href="{% static 'style/menu.css' %}">
 <link rel="stylesheet" href="{% static 'style/grid.css' %}">
@@ -13,54 +12,8 @@
 
 <div class="menu">
 	<div class="grid">
-		<div class="card">
-			Recent
-			{% if blogs %}
-				{% for blog in recent_blogs %}
-					<a href="javascript:toggle('recent_blog_content{{ blog.id }}')">
-						<div class="card">
-							{{ blog.title }}
-							<a href="/blog/{{ blog.id }}">
-								<div id="recent_blog_content{{ blog.id }}" style="margin-top: 1vw; display: none;">
-									{{ blog.preview }}...
-									<div class="card">
-										Read more
-									</div>
-								</div>
-							</a>
-						</div>
-					</a>
-				{% endfor %}
-			{% else %}
-				<div class="card">
-					There are no blogs currently posted.
-				</div>
-			{% endif %}
-		</div>
-		<div class="card">
-			All
-			{% if blogs %}
-				{% for blog in blogs %}
-					<a href="javascript:toggle('blog_content{{ blog.id }}')">
-						<div class="card">
-							{{ blog.title }}
-							<a href="/blog/{{ blog.id }}">
-								<div id="blog_content{{ blog.id }}" style="margin-top: 1vw; display: none;">
-									{{ blog.preview }}...
-									<div class="card">
-										Read more
-									</div>
-								</div>
-							</a>
-						</div>
-					</a>
-				{% endfor %}
-			{% else %}
-				<div class="card">
-					There are no blogs currently posted.
-				</div>
-			{% endif %}
-		</div>
+		{% include 'blog/show_blogs.html' with title='Recent' blogs=recent_blogs %}
+		{% include 'blog/show_blogs.html' with title='All' blogs=blogs %}
 	</div>
 </div>
 

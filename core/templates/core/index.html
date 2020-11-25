@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block content %}
 
-<script src="{% static 'script/toggle.js' %}"></script>
+{% load static %}
 
+<script src="{% static 'script/toggle.js' %}"></script>
 <link rel="stylesheet" href="{% static 'style/profile.css' %}">
 <link rel="stylesheet" href="{% static 'style/menu.css' %}">
 <link rel="stylesheet" href="{% static 'style/grid.css' %}">
@@ -34,9 +34,11 @@
 			</div>
 		</a>
 
-		<div id="resume" class="card">
-			Resume
-		</div>
+		<a href="/blog">
+			<div id="resume" class="card">
+				Resume
+			</div>
+		</a>
 
 		<a href="https://github.com/jack-davidson">
 			<div id="git" class="card">
