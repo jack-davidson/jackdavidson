@@ -4,18 +4,11 @@ personal website and blog
 This is my personal website and blog where I post about technology related
 subjects.
 
-# installation
+# installation procedure
 ```bash
 $ git clone https://github.com/jack-davidson/jackdavidson.git
 $ cd jackdavidson
-$ pip install virtualenv
-$ virtualenv venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
-$ ./tools/generate_secret_key.py
-$ ./manage.py makemigrations
-$ ./manage.py migrate
-$ ./manage.py runserver
+$ ./tools/setup.sh
 ```
 and DONE! You will have to do additional setup for using the admin
 interface such as creating a superuser to manage the website, the
