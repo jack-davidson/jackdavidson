@@ -12,8 +12,7 @@ $ pip install virtualenv
 $ virtualenv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
-$ python3 -c "from django.core.management import utils;
-  print(utils.get_random_secret_key())" > secret_key.txt
+$ ./tools/generate_secret_key.py
 $ ./manage.py makemigrations
 $ ./manage.py migrate
 $ ./manage.py runserver
