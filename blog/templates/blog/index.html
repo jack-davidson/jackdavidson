@@ -14,12 +14,20 @@
 <div class="menu">
 	<div class="grid">
 		<div class="card">
-			All Blogs
+			Recent
 			{% if blogs %}
 				{% for blog in recent_blogs %}
-					<a href="/blog/{{ blog.id }}">
+					<a href="javascript:toggle('recent_blog_content{{ blog.id }}')">
 						<div class="card">
 							{{ blog.title }}
+							<a href="/blog/{{ blog.id }}">
+								<div id="recent_blog_content{{ blog.id }}" style="margin-top: 1vw; display: none;">
+									{{ blog.preview }}...
+									<div class="card">
+										Read more
+									</div>
+								</div>
+							</a>
 						</div>
 					</a>
 				{% endfor %}
@@ -30,12 +38,20 @@
 			{% endif %}
 		</div>
 		<div class="card">
-			All Blogs
+			All
 			{% if blogs %}
 				{% for blog in blogs %}
-					<a href="/blog/{{ blog.id }}">
+					<a href="javascript:toggle('blog_content{{ blog.id }}')">
 						<div class="card">
 							{{ blog.title }}
+							<a href="/blog/{{ blog.id }}">
+								<div id="blog_content{{ blog.id }}" style="margin-top: 1vw; display: none;">
+									{{ blog.preview }}...
+									<div class="card">
+										Read more
+									</div>
+								</div>
+							</a>
 						</div>
 					</a>
 				{% endfor %}
