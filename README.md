@@ -5,7 +5,7 @@ This is my personal website and blog where I post about technology related
 subjects.
 
 # installation
-```
+```bash
 $ git clone https://github.com/jack-davidson/jackdavidson.git
 $ cd jackdavidson
 $ pip install virtualenv
