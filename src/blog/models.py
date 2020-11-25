@@ -4,7 +4,7 @@ import re
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=50)
-    date = models.DateTimeField(default=now, blank=True)
+    date = models.DateTimeField(default=now, blank=False)
     document = models.TextField(max_length=10000, default="this document is blank")
 
     # preview document. Returns first 50 characters with html tags removed.
