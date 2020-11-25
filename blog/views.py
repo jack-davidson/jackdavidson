@@ -5,9 +5,6 @@ from .models import BlogPost
 
 # blog index page
 def index(request):
-    # TODO: add pop-out menus to blog homepage and display the first few lines
-    # of the blog and add a buttom 'read more' that just links to the blog.
-
     # unorded list of all blogs
     blogs = BlogPost.objects.all()
 
