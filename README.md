@@ -5,9 +5,22 @@ This is my personal website and blog where I post about technology related
 subjects.
 
 # installation
-To install and run this on your own machine using the django development server,
-first clone this repository:
-`git clone https://github.com/jack-davidson/jackdavidson.git`
+```
+$ git clone https://github.com/jack-davidson/jackdavidson.git
+$ cd jackdavidson
+$ pip install virtualenv
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ python3 -c "from django.core.management import utils;
+  print(utils.get_random_secret_key())" > secret_key.txt
+$ ./manage.py makemigrations
+$ ./manage.py migrate
+$ ./manage.py runserver
+```
+and DONE! You will have to do additional setup for using the admin
+interface such as creating a superuser to manage the website, the
+instructions for this are documented in the django documentation.
 
 # technologies used
 I am using:

@@ -27,8 +27,8 @@ with open('secret_key.txt') as f:
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "192.168.1.173",
     "0.0.0.0",
+    "127.0.0.1",
 ]
 
 
