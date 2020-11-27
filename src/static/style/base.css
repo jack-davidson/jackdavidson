@@ -1,9 +1,3 @@
-/*
- * This is the base css file. All styles that are needed globally and only
- * globally are located here.
- *
- */
-
 html {
 	font-family: 'Roboto Mono', monospace;
 	background-color: #fff;
@@ -23,5 +17,5 @@ body {
 a {
 	text-decoration: none;
 	text-align: center;
-	color: inherit; 
+	color: #000000; 
 }
