@@ -36,9 +36,6 @@ secret key from the gitignore because if it gets exposed and used in production,
 that would be a serious security vulnerability. It is good to generate a
 secret key often.
 
-LNSP stack, I don't know if this is a thing but this is what my stack's acronym
-is.
-
 # project structure
 
 As django is a very structured framework, developers need to make sure that they
