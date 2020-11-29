@@ -26,6 +26,16 @@ the acronym for this is:
 **S** qlite
 **P** ython
 
+# reminders!
+when developing and deploying, you need to make sure that the secret key is
+never added to version control. You must `cd` into the `src/` directory and run
+`../tools/generate_secret_key.py > secret_key.txt`. A more concise version of
+this would to be in the root directory of the project and run
+`./tools/generate_secret_key.py > src/secret_key.txt`. Do not remove the
+secret key from the gitignore because if it gets exposed and used in production,
+that would be a serious security vulnerability. It is good to generate a
+secret key often.
+
 LNSP stack, I don't know if this is a thing but this is what my stack's acronym
 is.
 
