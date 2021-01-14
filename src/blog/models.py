@@ -11,5 +11,6 @@ class BlogPost(models.Model):
     def preview(self):
         return re.compile(r'<[^>]+>').sub('', self.document[:50])
     
+    # instances of a BlogPost object can be identified by self.title
     def __str__(self):
         return self.title
