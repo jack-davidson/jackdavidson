@@ -3,6 +3,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 from .models import BlogPost
 
+
 # blog index page
 def index(request):
     # unorded list of all blogs
@@ -13,11 +14,12 @@ def index(request):
 
     # context stores the variables our template needs access to
     context = {
-        'blogs': blogs, # all blogs
-        'recent_blogs': recent_blogs, # top 5 most recent blogs
+        'blogs': blogs,                # all blogs
+        'recent_blogs': recent_blogs,  # top 5 most recent blogs
     }
 
     return render(request, 'blog/index.html', context)
+
 
 # view a blog by its id
 def blog(request, blogid):
