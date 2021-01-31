@@ -15,4 +15,4 @@ pip install -r requirements.txt
 
 printf "\n\033[31m**\033[0m\033[32m You are now ready to start development or \
 run the django development server with ./manage.py runserver (make sure you are\
-in the /src directory)\033[0m\033[31m**\033[0m\n\n"
+ in the /src directory)\033[0m\033[31m**\033[0m\n\n"
